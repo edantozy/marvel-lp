@@ -4,7 +4,7 @@ Proyecto realizado con la API de Marvel.
 
 Este proyecto utiliza un archivo data.json para la autenticación, por lo que no es posible registrarse, solo iniciar sesión. Los usuarios son:
 
-- user: joen@doe.com -> password: password
+- user: john@doe.com -> password: password
 - user: jane@doe.com -> password: password
 
 ## Funcionalidades
