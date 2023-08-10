@@ -5,8 +5,8 @@ import { NotFoundPage } from '../ui/pages'
 import { CharacterPage, CharactersPage } from '../characters/pages'
 import { ComicPage, ComicsPage } from '../comics/pages'
 import { useCheckAuth } from '../hooks/useCheckAuth'
-import { ProfilePage } from '../profile/pages'
 import { FavoritesPage } from '../favorites/pages'
+import { ProfilePage } from '../profile/pages'
 
 export const AppRouter = () => {
     const status = useCheckAuth();
@@ -42,7 +42,7 @@ export const AppRouter = () => {
                                 <Route path="profile" element={<ProfilePage />} />
                                 <Route path="favorites" element={<FavoritesPage />} />
                             </>
-                        ): (
+                        ) : (
                             <>
                                 <Route path="profile" element={<Navigate to="/characters" />} />
                                 <Route path="favorites" element={<Navigate to="/characters" />} />
