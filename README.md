@@ -1,27 +1,45 @@
-# React + TypeScript + Vite
+# Proyecto Marvel LP hecho con React + TypeScript + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Proyecto realizado con la API de Marvel.
 
-Currently, two official plugins are available:
+Este proyecto utiliza un archivo data.json para la autenticación, por lo que no es posible registrarse, solo iniciar sesión. Los usuarios son:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- user: joen@doe.com -> password: password
+- user: jane@doe.com -> password: password
 
-## Expanding the ESLint configuration
+## Funcionalidades
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+- Es posible visualizar personajes y comics en un listado paginado que implementa la búsqueda. Es importante mencionar que la búsqueda solo funciona si se realiza con las palabras iniciales de un personaje. Por ejemplo: para "Spider Man" la búsqueda que funcionaría es "Spi", si se intenta buscar "der" no aparecerá el resultado.
 
-- Configure the top-level `parserOptions` property like this:
+- La búsqueda realizada se guarda en localstorage para poder regresar a la página del listado y esta sea conservada.
 
-```js
-   parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-   },
+- También es posible añadir a favoritos los personajes cuando se está autenticado. Desafortunadamente como solo es un proyecto de React sin backend, no es posible añadirlos al archivo data.json. Solamente se guardan en el estado de Redux.
+
+## Ejecutar el proyecto en local
+Para ejecutar el proyecto en local, ejecute:
+```bash
+   npm install
+```
+Seguido de:
+```bash
+   npm run dev
+```
+Finalmente visualice la dirección que aparece en la consola.
+
+## Ejecutar el proyecto en producción
+Para ejecutar el proyecto en producción, ejecute:
+```bash
+   npm install
 ```
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+Después ejecute:
+```bash
+   npm run build
+```
+
+Seguido de:
+```bash
+   npm run preview
+```
+
+Finalmente visualice la dirección que aparece en la consola.

@@ -1,0 +1,26 @@
+[
+    {
+        "id": 1,
+        "name": "John Doe",
+        "date_of_birth": "1990-01-01",
+        "email": "john@doe.com",
+        "password": "password",
+        "created_at": "2019-01-01 00:00:00",
+        "favorites": {
+            "characters": [],
+            "comics": []
+        }
+    },
+    {
+        "id": 2,
+        "name": "Jane Doe",
+        "date_of_birth": "1990-01-01",
+        "email": "jane@doe.com",
+        "password": "password",
+        "created_at": "2019-01-01 00:00:00",
+        "favorites": {
+            "characters": [],
+            "comics": []
+        }
+    }
+]
